@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes neonFloat {
+  0% { transform: scale(1) translateY(0px) rotate(0deg); }
+  50% { transform: scale(1.02) translateY(-10px) rotate(1deg); }
+  100% { transform: scale(1) translateY(0px) rotate(0deg); }
+}
+
+.animate-neonFloat {
+  animation: neonFloat 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px #0ff);
+}
+
+.neon-text {
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
+@layer utilities {
+  .animate-spin-slower {
+    animation: spin 20s linear infinite;
+  }
+  .shadow-glow {
+    text-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
